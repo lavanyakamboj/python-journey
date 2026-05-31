@@ -1,0 +1,24 @@
+1.what is pip , module
+
+    pip - the tool used to install external libraries (packages) in Python.  eg:pip install requests
+    module - a file containing Python code (functions, variables, classes).
+
+        Types of modules:
+
+            1. Built-in modules
+                Already available in Python:
+                import math
+                print(math.sqrt(16))
+
+            2. User-defined modules
+                You create your own file: file: mymodule.py
+                then use file : 
+                def greet(name):
+                    return "Hello " + name
+
+            3. External modules
+                Installed using pip:
+                pip install numpy
+                pip install pyjocks -- for jokes
+
+                
