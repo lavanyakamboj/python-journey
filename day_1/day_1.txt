@@ -22,3 +22,14 @@
                 pip install pyjocks -- for jokes
 
                 
+example  for imports
+import math     to use it we use math.qrt
+orr   from math import sqrt,pi
+orr   from math import *( it is not usually used because it import all the functions so not usually recomended )
+
+
+import.pandas
+
+math library : 
+import math
+print(dir(math))  //print all functions of math library
