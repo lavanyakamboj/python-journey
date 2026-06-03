@@ -1,0 +1,15 @@
+-- list 
+A list is used to store multiple values in a single variable.
+    list are mutable
+    have index
+    it can store values of any type
+eg: Marks = [12,34,54,24,54,56]
+    names = [12,34,54,"hello","hi"]
+
+-- tuples -- 
+A tuples is used to store multiple values in a single variable.
+    list are immutable
+    have index
+eg: Marks = (12,34,54,24,54,56)
+    to create tuple with only one element then we should add "," after t otherwise that is considered as the integer
+    eg: Marks = (12,)

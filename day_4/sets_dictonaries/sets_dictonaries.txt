@@ -1,0 +1,27 @@
+-- Dictionary 
+
+A dictionary stores data in key : value pairs.
+syntax: dict_name={ key : value, }
+
+    Creating a Dictionary
+        student = {
+            "name": "Rahul",
+            "age": 20,
+            "course": "BCA"
+        }
+
+        print(student)
+
+Output: {'name': 'Rahul', 'age': 20, 'course': 'BCA'}
+
+-- Sets
+
+A set stores unique values only. Duplicate values are automatically removed.
+ordere isnot maintained in Sets
+
+Creating a Set
+    numbers = {1, 2, 3, 4, 5}
+    print(numbers)
+Duplicate Values
+    nums = {1, 2, 2, 3, 3, 4}   - duplicates value are not accepted
+    print(nums)
