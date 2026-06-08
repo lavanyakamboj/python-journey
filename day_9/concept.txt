@@ -1,0 +1,127 @@
+--- python provides several methods to handle file 
+
+- To open file = open('file name','mode')
+- it takes two arguments first is "file name" and second is "mode" in which that file shoulld be opened  
+- The mode can be : 
+      1. 'r' for reading                 
+      2. 'w' for writting                       
+      3. 'a' for appending
+      4. 'x' for create mode .it create the file and if file is already exist it shows error.
+      5. 't' it specifis that how we want to open the file . it specifies the text file . it is by default
+      6. 'b' it specifies to open the file as binary
+
+
+
+# 1. to append a file
+'''
+    f=open('for_file_io.txt','a')
+    f.write(" hello world")            #for append the file. here write is used.
+    f.close
+'''
+
+#   to read ,write or append combine
+    #here we use -- r+ ; w+ ; a+
+    # r+ -- no trunkated . read and write.
+'''
+    f=open('for_file_io.txt','r+')
+    f.write("hello here") # it over write the things in the other till the words we have written. printer goes to the starting.
+    print(f.read()) # it will read the things after we have over written. 
+    f.close 
+'''
+
+# w+ -- this is reading and writing . in tis case file gets trunkated i.e complete wiped out. 
+'''
+    f=open('for_file_io.txt','w+')
+    f.write("hello world present here")
+    f.close 
+'''
+
+# a+ -- read and append . This is the stream is positioned at the end of the file. file is not trunkated.
+'''
+    f=open('for_file_io.txt','a+')
+    f.write("hello world present here")
+    f.close 
+'''
+
+# *note--we have to close the file by f.close() , so to avoide it we use with open('file name','r') as f: to automaticallu close file
+'''
+    with open('for_file_io.txt','w') as f:
+    f.write("hello here")  
+'''
+
+
+# deleating a file 
+'''
+    import os
+    os.remove("filename")
+'''
+
+# practive questions 
+# 1. create a new file practice.txt using pythonw and add the following data in it .hii everyone  ; .we are learning file i/o ;  uning java ; i like learning in java
+'''
+f=open("practice.txt", "w")
+f.write("hii everyone\n")
+f.write("we are learning filei/o \n")
+f.write("uning java\n")
+f.write("i like learning in java\n")
+f.close
+'''
+
+# 2. write a programe to replace all  java to pythonin above text in the file
+'''
+f=open("practice.txt", "r")
+data=f.read()  # to read data
+print(data)
+ndata=data.replace("java","python")
+print(ndata)    # to replace word
+f.close()
+
+
+f=open("practice.txt", "w")
+f.write(ndata)
+f.close
+'''
+
+
+# 3. search weather the word learning exist in the file or not
+'''
+word = "learning"
+f=open("practice.txt", "r")
+data=f.read()  # to read data
+print(data)
+if (data.find(word) != -1):   # data.find(word) != -1 could be replaced by -- if word in data.
+   print("found")
+else:
+   print("not found")
+'''
+
+# 4. find the line in which the word learning exist first in the file or not
+
+word = "python"
+data = True
+lineno=1
+with open("practice.txt", "r") as f:
+   while data:
+      data=f.readline() 
+      if (word in data):
+          print("found")
+          print(lineno)
+          break
+      lineno+=1
+
+
+# 5. from a file containing the numbers serpeated by comma ,prin the count of even numbers
+'''
+count=0
+with open("practice.txt","r") as f:
+   data=f.read()
+   print(data)
+   num=data.split(",")
+   for i in num:
+      if(int(i)%2==0):
+         count+=1
+         print(i,"\n")
+print("total number divisible by 2 are =",count)
+
+
+   
