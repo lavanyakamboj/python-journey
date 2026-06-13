@@ -29,7 +29,7 @@
     f.close 
 '''
 
-# w+ -- this is reading and writing . in tis case file gets trunkated i.e complete wiped out. 
+# w+ -- this is reading and writing . in this case file gets trunkated i.e complete wiped out. 
 '''
     f=open('for_file_io.txt','w+')
     f.write("hello world present here")
@@ -57,14 +57,15 @@
 '''
 
 # practive questions 
+
 # 1. create a new file practice.txt using pythonw and add the following data in it .hii everyone  ; .we are learning file i/o ;  uning java ; i like learning in java
 '''
-f=open("practice.txt", "w")
-f.write("hii everyone\n")
-f.write("we are learning filei/o \n")
-f.write("uning java\n")
-f.write("i like learning in java\n")
-f.close
+    f=open("practice.txt", "w")
+    f.write("hii everyone\n")
+    f.write("we are learning filei/o \n")
+    f.write("uning java\n")
+    f.write("i like learning in java\n")
+    f.close
 '''
 
 # 2. write a programe to replace all  java to pythonin above text in the file
